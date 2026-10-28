@@ -1,0 +1,18 @@
+map_prompt: |
+  You are an expert context extraction agent. Analyze the following text chunk and extract structured data.
+  Identify all entities, their relationships, major plot points/arguments, and minor supporting details.
+  Be exhaustive. Do not miss granular facts.
+  
+  Text Chunk:
+  {chunk}
+
+reduce_prompt: |
+  You are an expert context synthesis agent. You will receive a massive list of extracted JSONs containing entities, relationships, and details from a large document.
+  Your task is to:
+  1. Deduplicate all entities (e.g., merge "USA" and "United States").
+  2. Deduplicate and merge relationships based on the unified entities.
+  3. Synthesize the major and minor details into a clean, comprehensive list.
+  4. Write a strict 1-line central idea for the entire document.
+  
+  Extracted Data:
+  {extracted_data}

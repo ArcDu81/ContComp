@@ -1,0 +1,13 @@
+langgraph
+langchain
+langchain-groq
+langchain-google-genai
+langchain-community
+langchain-text-splitters
+pydantic
+tenacity
+psycopg-pool
+psycopg-binary
+python-dotenv
+pyyaml
+pypdf
